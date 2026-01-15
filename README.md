@@ -25,22 +25,6 @@ A **lyrics-based music recommendation system** that suggests similar songs using
 
 ---
 
-## 📂 Project Structure
-
-```
-music-recommendation-app-python/
-│
-├── app.py                 # Streamlit application
-├── data/                  # Dataset directory
-│   └── songs.csv          # Songs dataset with lyrics
-├── model.py               # Recommendation logic
-├── requirements.txt       # Project dependencies
-├── README.md              # Project documentation
-└── utils.py               # Helper functions (optional)
-```
-
----
-
 ## 📊 Dataset
 
 The dataset should include at least the following columns:
@@ -83,8 +67,8 @@ Example:
 ### 1️⃣ Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/music-recommendation-app-python.git
-cd music-recommendation-app-python
+git clone https://github.com/Shivaniii12/Music-Recommendation-App-
+cd Music-Recommendation-App-
 ```
 
 ### 2️⃣ Install Dependencies
