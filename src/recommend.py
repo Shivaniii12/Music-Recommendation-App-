@@ -12,6 +12,7 @@ logging.basicConfig(
         logging.StreamHandler()
     ]
 )
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 try:
     logging.info("🔁 Loading data...")
     df = joblib.load(os.path.join(BASE_DIR, "df_cleaned.pkl"))
