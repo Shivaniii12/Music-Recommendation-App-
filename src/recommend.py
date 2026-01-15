@@ -12,13 +12,17 @@ logging.basicConfig(
         logging.StreamHandler()
     ]
 )
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-
 try:
     logging.info("🔁 Loading data...")
     df = joblib.load(os.path.join(BASE_DIR, "df_cleaned.pkl"))
-    cosine_sim = joblib.load(os.path.join(BASE_DIR, "cosine_sim.pkl"))
+    tfidf = TfidfVectorizer(stop_words="english")
+    tfidf_matrix = tfidf.fit_transform(df["song"])
+
+    cosine_sim = cosine_similarity(tfidf_matrix)
+    # cosine_sim = joblib.load(os.path.join(BASE_DIR, "cosine_sim.pkl"))
     logging.info("✅ Data loaded successfully.")
+
+
 except Exception as e:
     logging.error("❌ Failed to load required files: %s", str(e))
     raise
